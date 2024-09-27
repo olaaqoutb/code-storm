@@ -35,7 +35,6 @@ button {
   transition: background-color 0.3s;
 }
 
-/* عند الـ hover على الزر يكون بدرجة غامقة من الأصفر */
 button:hover {
   background-color: #b36b00;
 }
@@ -77,11 +76,8 @@ html, body {
   border-radius: 12px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
-  z-index: 2; /* لضمان ظهور النموذج فوق الخلفية */
+  z-index: 2; 
 }
-
-
-
 
 
 .competition-form:hover {

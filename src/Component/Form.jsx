@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import './Form.css'; 
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+
 const CodeStormForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -85,7 +86,7 @@ const CodeStormForm = () => {
       // إيقاف المطر عند الوصول إلى 80% من الصفحة
       gsap.to(rainDrop, {
         y: window.innerHeight * 0.8, // 80% من الطول
-        duration: Math.random() * 7 + 9,
+        duration: Math.random() * 4 + 5,
         ease: 'linear',
         onComplete: () => {
           rainDrop.remove();
@@ -99,7 +100,7 @@ const CodeStormForm = () => {
       });
     };
 
-    const interval = setInterval(createRainDrop, 600);
+    const interval = setInterval(createRainDrop, 300);
 
     return () => clearInterval(interval);
   }, []);
