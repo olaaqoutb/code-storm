@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+
+
+
+.form-group input::placeholder {
+  color: rgb(255, 153, 0);
+}
+
+.form-group input:hover {
+  border-color: rgb(255, 166, 0);
+}
+
+.form-group input:focus {
+  border-color: #b36b00; 
+  outline: none; 
+}
+
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(222, 137, 10);
+  color: black;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s;
+}
+
+/* عند الـ hover على الزر يكون بدرجة غامقة من الأصفر */
+button:hover {
+  background-color: #b36b00;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url(../assets/crumpled-black-paper-texture.jpg);
+  color: #fff;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+  position: relative;
+  z-index: 9
+}
+.code-storm-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: rgb(222, 137, 10);;
+  
+}
+
+.competition-form {
+  width: 100%;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  z-index: 2; /* لضمان ظهور النموذج فوق الخلفية */
+}
+
+
+
+
+
+.competition-form:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+  margin-bottom: 11px;
+}
+
+label {
+  font-size: 1.2rem;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0.5rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  background-color: #000000;
+  color: #000000;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #d4d4d4;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+input:hover {
+  border-color: #ecf00d;
+  box-shadow: 0 0 15px rgba(212, 124, 0, 0.7);
+}
+
+input::placeholder {
+  color: #ffffff;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ebebeb;
+  color: #0a192f;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0a192f;
+  color: #e6d518;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(100, 255, 218, 0.2);
+}
+/* Form.css */
+
+.rain-drop {
+  position: absolute;
+  top: -20px; /* بداية من خارج الشاشة */
+  color: #c6a70c; /* لون الأرقام */
+  font-family: 'Courier New', Courier, monospace; /* نوع خط الأكواد */
+  font-size: 1.5rem; /* حجم الخط */
+  white-space: nowrap; /* منع التفاف النص */
+  filter: blur(0.5px); /* تأثير ضبابي */
+  z-index: 0; /* أقل من الفورم */
+  pointer-events: none; /* لمنع التفاعل مع المطر */
+}
+
+/* هذا هو الفورم مع Z-Index أعلى */
+.code-storm-form {
+  position: relative;
+  z-index: 10; /* أعلى من المطر */
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+
+/* خلفية الفضاء المتحركة */
+.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875em;
+}
+
+@media (max-width: 600px) {
+  .code-storm-form {
+    width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    overflow-y: scroll;
+  }
+}
